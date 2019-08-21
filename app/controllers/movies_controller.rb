@@ -4,13 +4,13 @@ include API
 
   def index
     response = API::Interface.call("/movies")
-    @movies = JSON.parse(response)
+    @movies = JSON.parse(response).paginate(params[:page], 5)
     render :index
   end
 
   def show
     response = API::Interface.call("/movies/#{params[:id]}")
-    @movies = JSON.parse(response)
+    @movie = JSON.parse(response)
     render :show
   end
 
