@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/longest', to: 'movies#longest'
   get '/rating', to: 'movies#rating'
   get '/popular', to: 'movies#popular'
-  get '/title_by_letter/:letter', to: 'movies#title_by_letter'
+  get '/letter/:letter', to: 'movies#letter'
   get '/title', to: 'movies#title'
   get '/year_released/:year', to: 'movies#year_released'
 end

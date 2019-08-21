@@ -38,9 +38,9 @@ include API
     render :index
   end
 
-  def title_by_letter
+  def letter
     letter = params[:letter]
-    response = API::Interface.call("/title_by_letter/#{letter}")
+    response = API::Interface.call("/letter/#{letter}")
     @movies = JSON.parse(response)
     render :index
   end
