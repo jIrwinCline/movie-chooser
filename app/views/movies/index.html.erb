@@ -1,0 +1,7 @@
+<h1>Welcome to the movie site</h1>
+<% @movies.each do |m| %>
+<div class="">
+  <p><%= m["title"]%></p>
+  <p><%= m["overview"] %></p>
+</div>
+<% end %>
