@@ -1,7 +1,8 @@
-<h1>Welcome to the movie site</h1>
+<h1 class="page-header">Welcome to the movie site</h1><br />
 <% @movies.each do |m| %>
-<div class="">
-  <p><%= m["title"]%></p>
+<div class="card card-body bg-light card-add">
+  <h3><%= m["title"]%></h3>
   <p><%= m["overview"] %></p>
+  <%= link_to "View Details", "/movies/#{m["id"]}" %>
 </div>
 <% end %>

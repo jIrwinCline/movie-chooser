@@ -1,0 +1,24 @@
+<h2><%= @movie["title"] %></h2>
+
+<%= @movie["tagline"] %><br />
+<% if @movie["budget"].to_i > 0 %>
+  <h4><%= @movie["budget"] %></h4><br />
+<% end %>
+<%= @movie["genres"] %><br />
+<%= @movie["homepage"] %><br />
+<%= @movie["imdb_id"] %><br />
+<%= @movie["original_language"] %><br />
+<%= @movie["original_title"] %><br />
+<%= @movie["overview"] %><br />
+<%= @movie["popularity"] %><br />
+<%= @movie["production_companies"] %><br />
+<%= @movie["production_countries"] %><br />
+<%= @movie["release_date"] %><br />
+<%= @movie["revenue"] %><br />
+<%= @movie["runtime"] %><br />
+<%= @movie["spoken_languages"] %><br />
+<%= @movie["status"] %><br />
+<%= @movie["tagline"] %><br />
+<%= @movie["video"] %><br />
+<%= @movie["vote_average"] %><br />
+<%= @movie["vote_count"] %><br />
