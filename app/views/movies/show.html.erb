@@ -1,17 +1,20 @@
-<h2><%= @movie["title"] %></h2>
+<h2><%= @movie["title"] %></h2><hr />
 
 <%= @movie["tagline"] %><br />
 <% if @movie["budget"].to_i > 0 %>
   <h4><%= @movie["budget"] %></h4><br />
 <% end %>
+<% if @movie["genres"]%>
 <%= @movie["genres"] %><br />
+<% end %>
 <%= @movie["homepage"] %><br />
 <%= @movie["imdb_id"] %><br />
 <%= @movie["original_language"] %><br />
 <%= @movie["original_title"] %><br />
 <%= @movie["overview"] %><br />
 <%= @movie["popularity"] %><br />
-<%= @movie["production_companies"] %><br />
+<%# Use the method eval(@movie["production_companies"]) here to convert properly into a JSON format object with key value pairs%>
+<%= @movie["production_companies"] %><br>
 <%= @movie["production_countries"] %><br />
 <%= @movie["release_date"] %><br />
 <%= @movie["revenue"] %><br />
